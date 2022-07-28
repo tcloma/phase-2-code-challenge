@@ -1,10 +1,11 @@
 import React from "react";
 import { getRandomPlaneteer } from "../data/planeteers";
 
-function RandomButton() {
+function RandomButton({ addPlaneteer }) {
   function handleClick() {
     const randomPlaneteer = getRandomPlaneteer();
-    console.log("For the advanced deliverables", randomPlaneteer);
+    addPlaneteer(randomPlaneteer)
+    // console.log("For the advanced deliverables", randomPlaneteer);
   }
 
   return (
